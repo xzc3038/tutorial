@@ -1,0 +1,40 @@
+/* pages/detail/index.wxss */
+.slide-image{
+  width: 98%;
+  height: 100%;
+  margin-left: 1%
+}
+/* 底部购买 */
+.buyBar{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+}
+.buyBar .buyBar-home{
+  background-color: #f3ebeb;
+  display: inline-block;
+  padding: 0 35rpx;
+}
+.buyBar .buyBar-home image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.buyBar .buyBar-home .buyBar-title{
+  font-size: 20rpx;
+}
+.buyBar .buyBar-car{
+  background-color: #dedede;
+  display: inline-block;
+  line-height: 120rpx;
+  padding: 0 90rpx;
+  font-size: 30rpx
+}
+.buyBar .buyBar-buy{
+  background-color: rgb(223, 21, 21);
+  display: inline-block;
+  line-height: 120rpx;
+  padding: 0 90rpx;
+  color: white;
+  font-size: 30rpx
+}

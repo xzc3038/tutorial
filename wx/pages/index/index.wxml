@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view>
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='topBar'>
+  <view class='topBar-content' bindtap='show'>
+    <image src='../../images/index/bar1.jpg'></image>
+    <view class='topbar-title'>零食</view>
+  </view>
+  <view class='topBar-content'>
+    <image src='../../images/index/bar2.jpg'></image>
+    <view class='topbar-title'>酒水</view>
+  </view>
+  <view class='topBar-content'>
+    <image src='../../images/index/bar3.jpg'></image>
+    <view class='topbar-title'>电子</view>
+  </view>
+  <view class='topBar-content'>
+    <image src='../../images/index/bar4.jpg'></image>
+    <view class='topbar-title'>衣裤</view>
+  </view>
+</view>
+<view class='goods'>
+  <view class='goods-content' bindtap='detile'>
+    <image src='../../images/index/goods2.jpg'></image>
+    <view class='goods-title'>零食大礼包</view>
+    <view class='goods-price'>￥<text>120</text></view>
+    <image src='../../images/carOn.png' class='car'></image>
+  </view>
+  <view class='goods-content'>
+    <image src='../../images/index/goods2.jpg'></image>
+    <view class='goods-title'>零食大礼包</view>
+    <view class='goods-price'>￥<text>120</text></view>
+    <image src='../../images/carOn.png' class='car'></image>
+  </view>
+  <view class='goods-content'>
+    <image src='../../images/index/goods2.jpg'></image>
+    <view class='goods-title'>零食大礼包</view>
+    <view class='goods-price'>￥<text>120</text></view>
+    <image src='../../images/carOn.png' class='car'></image>
+  </view>
+</view>
+
+

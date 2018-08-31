@@ -1,0 +1,23 @@
+<!--pages/detail/index.wxml-->
+<view>
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="good">
+  <view class='good-title'>今年过节不收礼，收礼只收大礼包</view> 
+  <view class='good-description'>高端 大气 上档次</view>
+  <view class='good-price'>￥120</view>
+</view>
+<view class='buyBar'>
+  <view class='buyBar-home'>
+    <image src='../../images/home.png'></image>
+    <view class='buyBar-title'>首页</view>
+  </view>
+  <view class='buyBar-car'>加入购物车</view>
+  <view class='buyBar-buy' bindtap='send'>立即购买</view>
+</view>

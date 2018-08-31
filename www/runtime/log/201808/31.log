@@ -1,0 +1,158 @@
+---------------------------------------------------------------
+[ 2018-08-31T17:25:18+08:00 ] 127.0.0.1 POST /admin/index/login?url=%2Fadmin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012493s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.001010s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.001183s ]
+[ sql ] [ SQL ] UPDATE `admin`  SET `loginfailure`=1,`updatetime`=1535707518  WHERE  `id` = 1 [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_log` [ RunTime:0.000660s ]
+[ sql ] [ SQL ] INSERT INTO `admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin\",\"__token__\":\"14559bf77509081f4a57c30fd2e86295\",\"username\":\"admin\"}' , '/admin/index/login?url=%2Fadmin' , 0 , 'Unknown' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36' , '127.0.0.1' , 1535707518) [ RunTime:0.000706s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:25:28+08:00 ] 127.0.0.1 POST /admin/index/login?url=%2Fadmin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011153s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.003122s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000845s ]
+[ sql ] [ SQL ] UPDATE `admin`  SET `loginfailure`=0,`logintime`=1535707528,`token`='49714afe-757a-4644-9521-e8ad30f6a4ce',`updatetime`=1535707528  WHERE  `id` = 1 [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_log` [ RunTime:0.002905s ]
+[ sql ] [ SQL ] INSERT INTO `admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin\",\"__token__\":\"fee2b0d07ee38c2187e597b5e89e0779\",\"username\":\"admin\"}' , '/admin/index/login?url=%2Fadmin' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36' , '127.0.0.1' , 1535707528) [ RunTime:0.000702s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:25:29+08:00 ] 127.0.0.1 GET /admin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011072s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.002608s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001987s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003105s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000493s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:25:29+08:00 ] 127.0.0.1 GET /admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011070s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000580s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:25:33+08:00 ] 127.0.0.1 GET /admin/goods?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010685s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001365s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000962s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.001297s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001433s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `auth_rule` WHERE  `name` = 'goods' LIMIT 1 [ RunTime:0.000643s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:25:34+08:00 ] 127.0.0.1 GET /admin/goods/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1535707533797
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010818s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000613s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `goods` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000286s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:25:35+08:00 ] 127.0.0.1 GET /admin/goods/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010370s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000606s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:31:38+08:00 ] 127.0.0.1 GET /admin/goods?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010396s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001377s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001078s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.001268s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000595s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:31:38+08:00 ] 127.0.0.1 GET /admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010535s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.002749s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002145s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.002861s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT * FROM `auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000908s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:31:38+08:00 ] 127.0.0.1 GET /admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011172s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001778s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.001450s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000687s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000465s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:31:38+08:00 ] 127.0.0.1 GET /admin/goods?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010866s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.002367s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001837s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.002174s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000918s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `auth_rule` WHERE  `name` = 'goods' LIMIT 1 [ RunTime:0.000594s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:31:38+08:00 ] 127.0.0.1 GET /admin/goods?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001547s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001779s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.001464s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `auth_rule` WHERE  `name` = 'goods' LIMIT 1 [ RunTime:0.000712s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:31:38+08:00 ] 127.0.0.1 GET /admin/goods/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1535707898707
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010235s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.001520s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001157s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.001407s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.002743s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `goods` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000467s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:31:39+08:00 ] 127.0.0.1 GET /admin/goods/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1535707899053
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010599s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.003337s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002859s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003196s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001321s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.000928s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `goods` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000305s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:31:41+08:00 ] 127.0.0.1 GET /admin/goods/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010846s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000601s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:36:37+08:00 ] 127.0.0.1 GET /admin/goods/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011216s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000775s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000735s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001014s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:36:57+08:00 ] 127.0.0.1 POST /admin/ajax/upload
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011441s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `attachment` [ RunTime:0.001269s ]
+[ sql ] [ SQL ] INSERT INTO `attachment` (`admin_id` , `filesize` , `imagewidth` , `imageheight` , `imagetype` , `mimetype` , `url` , `uploadtime` , `storage` , `sha1` , `createtime` , `updatetime`) VALUES (1 , 47595 , '500' , '500' , 'jpg' , 'image/jpeg' , '/uploads/20180831/69beb97054048e1568fd3a5ea421309c.jpg' , 1535708217 , 'local' , '77220a0638b5a3d20c3455d2bab48b1a3aa71d78' , 1535708217 , 1535708217) [ RunTime:0.000619s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_log` [ RunTime:0.001367s ]
+[ sql ] [ SQL ] INSERT INTO `admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"name\":\"goods2.jpg\"}' , '/admin/ajax/upload' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36' , '127.0.0.1' , 1535708217) [ RunTime:0.000535s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:37:12+08:00 ] 127.0.0.1 POST /admin/goods/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010036s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.001510s ]
+[ sql ] [ SQL ] INSERT INTO `goods` (`gname` , `discript` , `status` , `price` , `total` , `inventory` , `sold` , `img1` , `img2` , `img3` , `createtime` , `updatetime`) VALUES ('零食大礼包' , '很大的礼包' , 'normal' , 120 , 1000 , 997 , 0 , '/uploads/20180831/69beb97054048e1568fd3a5ea421309c.jpg' , '' , '' , 1535708232 , 1535708232) [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_log` [ RunTime:0.001474s ]
+[ sql ] [ SQL ] INSERT INTO `admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('商品管理 添加' , '{\"dialog\":\"1\",\"row\":{\"gname\":\"\\u96f6\\u98df\\u5927\\u793c\\u5305\",\"discript\":\"\\u5f88\\u5927\\u7684\\u793c\\u5305\",\"status\":\"normal\",\"price\":\"120.00\",\"total\":\"1000\",\"inventory\":\"997\",\"sold\":\"0\",\"img1\":\"\\/uploads\\/20180831\\/69beb97054048e1568fd3a5ea421309c.jpg\",\"img2\":\"\",\"img3\":\"\"}}' , '/admin/goods/add?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36' , '127.0.0.1' , 1535708232) [ RunTime:0.000556s ]
+---------------------------------------------------------------
+[ 2018-08-31T17:37:12+08:00 ] 127.0.0.1 GET /admin/goods/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1535707898708
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010959s ] mysql:host=127.0.0.1;dbname=xshop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.001601s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `goods` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000289s ]

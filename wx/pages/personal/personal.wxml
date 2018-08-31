@@ -1,0 +1,4 @@
+<!--pages/personal/index.wxml-->
+<view class='header'>
+    <image src='../../images/index/bar2.jpg'></image>
+</view>

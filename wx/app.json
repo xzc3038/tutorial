@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goods/goods",
+    "pages/car/car",
+    "pages/personal/personal",
+    "pages/detail/detail"    
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "解忧杂货铺",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "bordStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/homeOn.png"
+      },
+      {
+        "pagePath": "pages/goods/goods",
+        "text": "商品分类",
+        "iconPath": "/images/goods.png",
+        "selectedIconPath": "/images/goodsOn.png"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "text": "购物车",
+        "iconPath": "/images/car.png",
+        "selectedIconPath": "/images/carOn.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我",
+        "iconPath": "/images/personal.png",
+        "selectedIconPath": "/images/personalOn.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
