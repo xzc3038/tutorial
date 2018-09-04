@@ -2,10 +2,10 @@
 
 namespace app\index\controller;
 
-use app\common\controller\Frontend;
-use app\common\library\Token;
 
-class Index extends Frontend
+use app\model\Goods;
+
+class Index extends Controller
 {
 
     protected $noNeedLogin = '*';
@@ -20,9 +20,18 @@ class Index extends Frontend
     public function index()
     {
         if ($this->request->isPost()){
-            return 1;
+            $goods = new Goods();
+            $item = $goods->limit(10)->select();
+            $item = json($item);
+            return $item;
         }
+    }
 
+    public function detail(){
+        if($this->request->isPost()){
+            $id = input('post.id');
+            return Goods::where('id',$id)->find();
+        }
     }
 
 }

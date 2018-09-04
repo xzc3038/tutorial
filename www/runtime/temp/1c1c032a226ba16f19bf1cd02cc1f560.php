@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\work\xshop\www\public/../application/admin\view\goods\add.html";i:1535708191;s:60:"D:\work\xshop\www\application\admin\view\layout\default.html";i:1533742465;s:57:"D:\work\xshop\www\application\admin\view\common\meta.html";i:1533742465;s:59:"D:\work\xshop\www\application\admin\view\common\script.html";i:1533742465;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\work\xshop\www\public/../application/admin\view\goods\add.html";i:1535949632;s:60:"D:\work\xshop\www\application\admin\view\layout\default.html";i:1535949632;s:57:"D:\work\xshop\www\application\admin\view\common\meta.html";i:1535949632;s:59:"D:\work\xshop\www\application\admin\view\common\script.html";i:1535949632;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>

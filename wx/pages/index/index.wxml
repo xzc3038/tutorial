@@ -9,7 +9,7 @@
   </swiper>
 </view>
 <view class='topBar'>
-  <view class='topBar-content' bindtap='show'>
+  <view class='topBar-content'>
     <image src='../../images/index/bar1.jpg'></image>
     <view class='topbar-title'>零食</view>
   </view>
@@ -27,24 +27,14 @@
   </view>
 </view>
 <view class='goods'>
-  <view class='goods-content' bindtap='detile'>
-    <image src='../../images/index/goods2.jpg'></image>
-    <view class='goods-title'>零食大礼包</view>
-    <view class='goods-price'>￥<text>120</text></view>
-    <image src='../../images/carOn.png' class='car'></image>
-  </view>
-  <view class='goods-content'>
-    <image src='../../images/index/goods2.jpg'></image>
-    <view class='goods-title'>零食大礼包</view>
-    <view class='goods-price'>￥<text>120</text></view>
-    <image src='../../images/carOn.png' class='car'></image>
-  </view>
-  <view class='goods-content'>
-    <image src='../../images/index/goods2.jpg'></image>
-    <view class='goods-title'>零食大礼包</view>
-    <view class='goods-price'>￥<text>120</text></view>
-    <image src='../../images/carOn.png' class='car'></image>
-  </view>
+  <block  wx:for="{{goods}}" wx:for-item="good" wx:key="v">
+    <view class='goods-content' bindtap='detile' data-id="{{good.id}}">
+      <image src='../../images/index/goods2.jpg'></image>
+      <view class='goods-title'>{{good.gname}}</view>
+      <view class='goods-price'>￥<text>{{good.price}}</text></view>
+      <image src='../../images/carOn.png' class='car'></image>
+    </view>
+  </block>
 </view>
 
 

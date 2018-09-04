@@ -5,13 +5,28 @@ Page({
         "../../images/index/top1.jpg",
         "../../images/index/top2.jpg",
         "../../images/index/top3.jpg"
-      ]
+      ],
+      goods:[],
+      detailId:0
     },
   /**
 * 生命周期函数--监听页面加载
 */
   onLoad: function (options) {
-
+    var that = this;
+    wx.request({
+      url: 'http://www.xshop.com', //仅为示例，并非真实的接口地址
+      data: {},
+      method: "POST",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        that.setData({
+          goods: res.data
+        })
+      }
+    })
   },
 
   /**
@@ -62,25 +77,12 @@ Page({
   onShareAppMessage: function () {
 
   },
-  detile: function(){
+  detile: function(id){
+    // console.log(id.currentTarget.dataset.id);
+    const app = getApp();
+    app.globalData.goodsId = id.currentTarget.dataset.id;
     wx.navigateTo({
       url: '../detail/detail',
-    })
-  },
-  show: function(){
-    wx.request({
-      url: 'http://www.xshop.com', //仅为示例，并非真实的接口地址
-      data: {
-        x: '',
-        y: ''
-      },
-      method:"POST",
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        console.log(res.data)
-      }
     })
   }
 })

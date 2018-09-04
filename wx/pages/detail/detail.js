@@ -9,14 +9,31 @@ Page({
       "../../images/index/goods2.jpg",
       "../../images/index/goods2.jpg",
       "../../images/index/goods2.jpg"
-    ]
+    ],
+    goods:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    const app = getApp();
+    var that = this;
+    wx.request({
+      url: 'http://www.xshop.com/index/index/detail', //仅为示例，并非真实的接口地址
+      method:"POST",
+      data: {
+        id:app.globalData.goodsId
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        that.setData({
+          goods:res.data
+        })
+      }
+    })
   },
 
   /**
@@ -66,20 +83,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  send: function(){
-    wx.request({
-      url: 'http://www.walk.com/index/index/test', //仅为示例，并非真实的接口地址
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        console.log(res)
-      }
-    })
   }
 })

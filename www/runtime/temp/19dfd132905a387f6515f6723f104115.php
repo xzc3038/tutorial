@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:67:"D:\work\xshop\www\public/../application/admin\view\index\index.html";i:1533742465;s:57:"D:\work\xshop\www\application\admin\view\common\meta.html";i:1533742465;s:59:"D:\work\xshop\www\application\admin\view\common\header.html";i:1533742465;s:57:"D:\work\xshop\www\application\admin\view\common\menu.html";i:1533742465;s:60:"D:\work\xshop\www\application\admin\view\common\control.html";i:1533742465;s:59:"D:\work\xshop\www\application\admin\view\common\script.html";i:1533742465;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:67:"D:\work\xshop\www\public/../application/admin\view\index\index.html";i:1535949632;s:57:"D:\work\xshop\www\application\admin\view\common\meta.html";i:1535949632;s:59:"D:\work\xshop\www\application\admin\view\common\header.html";i:1535949632;s:57:"D:\work\xshop\www\application\admin\view\common\menu.html";i:1535949632;s:60:"D:\work\xshop\www\application\admin\view\common\control.html";i:1535949632;s:59:"D:\work\xshop\www\application\admin\view\common\script.html";i:1535949632;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
